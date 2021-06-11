@@ -1,0 +1,72 @@
+<template>
+	<div class="page no-navbar">
+		<div class="page-content">
+			<div class="page-title-wrapper">
+				<div class="page-title">
+					<a href="#" class="link back">
+						<i class="material-icons">arrow_back</i>
+					</a>
+					<h1 style="margin-top: 25px;">Indonesia</h1>
+				</div>
+			</div>
+			<div class="padding-left padding-right padding-bottom">
+				<div class="section-content padding-top">
+					{{#each data}}
+					<div class="list-post margin-bottom">
+						<div class="list-post-img">
+							<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="listpost1" style="object-fit: cover;">
+						</div>
+						<div class="list-post-content">
+							<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+							<div class="list-post-category"><a href="/">{{this.genre}}</a></div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+	export default{
+		mounted() {
+			var $this = this;
+			var app = this.$app;
+			var $$ = this.$$;
+			var self = this;
+		},
+		methods: {
+			singleMovie: function(e) {
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				var self = this;
+				localStorage.setItem('duration', $$(e.path[0]).data("duration"));
+				localStorage.setItem('title', $$(e.path[0]).data("title"));
+				localStorage.setItem('genre', $$(e.path[0]).data("genre"));
+				localStorage.setItem('quality', $$(e.path[0]).data("quality"));
+				localStorage.setItem('rating', $$(e.path[0]).data("rating"));
+				localStorage.setItem('thumbnail', $$(e.path[0]).data("thumbnail"));
+				localStorage.setItem('trailer', $$(e.path[0]).data("trailer"));
+				localStorage.setItem('watch', $$(e.path[0]).data("watch"));
+				console.log(e);
+			},
+		},
+		on: {
+			pageInit: function () {
+				var self = this;
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				app.request.get('http://api-lk21.herokuapp.com/country?country=indonesia', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					console.log(dataJSON);
+					self.$setState({
+						data: dataJSON.result
+					});
+				});
+			},
+		},
+	}
+</script>

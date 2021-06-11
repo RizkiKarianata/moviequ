@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+	<meta name="theme-color" content="#007aff">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<title>Movieku</title>
+	<% if (process.env.TARGET === 'web') { %>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<link rel="apple-touch-icon" href="static/icons/apple-touch-icon.png">
+	<link rel="icon" href="static/icons/favicon.png">
+	<% } %>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/framework7.md.min.css">
+	<link rel="stylesheet" href="static/css/icons.css">
+	<link rel="stylesheet" href="static/css/swipebox.min.css">
+	<link rel="stylesheet" href="static/css/app.css">
+	<style type="text/css">
+		.my-toolbar {
+			display: inline-block;
+		}
+	</style>
+</head>
+<body class="theme-dark">
+	<div id="app"></div>
+	<% if (process.env.TARGET === 'cordova') { %>
+	<script src="cordova.js"></script>
+	<% } %>
+	<script src="static/js/jquery-2.1.0.min.js"></script>
+	<script src="static/js/jquery.swipebox.min.js"></script>
+	<script src="static/js/chart.min.js"></script>
+</body>
+</html>

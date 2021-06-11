@@ -1,0 +1,87 @@
+<template>
+	<div class="page">
+		<div class="page-content">
+			<div class="page-title-wrapper margin-top page-title-transparent">
+				<div class="page-title">
+					<a href="#" class="link back">
+						<i class="material-icons">arrow_back</i>
+					</a>
+				</div>
+			</div>
+			{{#if data}}
+			<div class="padding-bottom">
+				<div class="section-content">
+					<div class="card-single-post">
+						<img src="{{myThumbnail}}" alt="1">
+						<div class="card-single-post-infos">
+							<h1>{{myTitle}}</h1>
+						</div>
+					</div>
+					<div class="block no-margin padding-top">
+						<div class="post-categories">
+							<a href="/">{{myGenre}}</a>
+						</div>
+						<div class="section-title-wrapper margin-top margin-bottom">
+							<div class="section-title">
+								<h3>Detail Film</h3>
+							</div>
+						</div>
+						<div align="center">
+							<iframe src="{{myYoutube}}" width="320" height="180" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+						</div>
+						<p><span>Duration:</span> {{myDuration}}</p>
+						<p><span>Quality:</span> {{myQuality}}</p>
+						<p><span>Rating:</span> {{myRating}}</p>
+						<p><span>Trailer:</span> {{myTrailer}}</p>
+						<p><span>Link:</span> <a href="{{myWatch}}" class="link external" target="_system">{{myWatch}}</a></p>
+					</div>
+				</div>
+			</div>
+			{{else}}
+			{{/if}}
+		</div>
+	</div>
+</template>
+<script>
+	export default{
+		mounted() {
+			var $this = this;
+			var app = this.$app;
+			var $$ = this.$$;
+			var self = this;
+		},
+		on: {
+			pageInit: function () {
+				var self = this;
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				app.request.get('https://api-lk21.herokuapp.com/comingsoon', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var duration = localStorage.getItem('duration').split("'").join("");
+					var title = localStorage.getItem('title').split("'").join("");
+					var genre = localStorage.getItem('genre').split("'").join("");
+					var quality = localStorage.getItem('quality').split("'").join("");
+					var rating = localStorage.getItem('rating').split("'").join("");
+					var thumbnail = localStorage.getItem('thumbnail').split("'").join("");
+					var trailer = localStorage.getItem('trailer').split("'").join("");
+					var watch = localStorage.getItem('watch').split("'").join("");
+					var youtube = trailer.replace('watch?v=', 'embed/');
+					self.$setState({
+						data: "hello",
+						myDuration: duration,
+						myTitle: title,
+						myGenre: genre,
+						myQuality: quality,
+						myRating: rating,
+						myThumbnail: thumbnail,
+						myTrailer: trailer,
+						myWatch: watch,
+						myYoutube: youtube
+					});
+				});
+			},
+		},
+	}
+</script>

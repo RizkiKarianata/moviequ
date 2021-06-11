@@ -1,0 +1,379 @@
+<template>
+	<div class="page no-navbar">
+		<div class="page-content">
+			<div class="page-title-wrapper">
+				<div class="page-title">
+					<h1>Movieku</h1>
+				</div>
+			</div>
+			<div class="classic-slide-posts padding-left padding-right padding-bottom">
+				<div class="section-title-wrapper">
+					<div class="section-title">
+						<h3>Yang Akan Datang</h3>
+					</div>
+					<a href="/movie-1/">
+						<span>Semuanya</span><i class="material-icons">chevron_right</i>
+					</a>
+				</div>
+				<div class="section-content padding-top">
+					<div class="swiper-container d_swiper1 swiper-container-horizontal">
+						<div class="swiper-wrapper">
+							{{#each data1}}
+							<div class="swiper-slide">
+								<div class="classic-slide-post">
+									<div class="classic-slide-post-img">
+										<img src="{{this.thumbnail}}" alt="m1" style="object-fit: cover;">
+									</div>
+									<div class="classic-slide-post-title">
+										<a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a>
+									</div>
+									<div class="classic-slide-post-desc">
+										{{this.genre}}
+									</div>
+								</div>
+							</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="small-card-slide classic-slide-posts padding-left padding-right padding-bottom">
+				<div class="section-title-wrapper">
+					<div class="section-title">
+						<h3>Terbaru</h3>
+					</div>
+					<a href="/movie-2/">
+						<span>Semuanya</span><i class="material-icons">chevron_right</i>
+					</a>
+				</div>
+				<div class="section-content padding-top">
+					<div class="swiper-container d_swiper2 swiper-container-horizontal">
+						<div class="swiper-wrapper">
+							{{#each data2}}
+							<div class="swiper-slide">
+								<div class="classic-slide-post">
+									<div class="classic-slide-post-img">
+										<img src="{{this.thumbnail}}" alt="m39" style="object-fit: cover;">
+									</div>
+									<div class="classic-slide-post-title">
+										<a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a>
+									</div>
+									<div class="review">
+										<i class="material-icons">star</i>
+										<i class="material-icons">star</i>
+										<i class="material-icons">star</i>
+										<i class="material-icons">star_half</i>
+										{{this.rating}}
+									</div>
+								</div>
+							</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-posts-slide padding-left padding-right padding-bottom">
+				<div class="section-title-wrapper">
+					<div class="section-title">
+						<h3>Serial TV</h3>
+					</div>
+					<a href="/movie-3/">
+						<span>Semuanya</span><i class="material-icons">chevron_right</i>
+					</a>
+				</div>
+				<div class="section-content padding-top">
+					<div class="swiper-container d_swiper3 swiper-container-horizontal">
+						<div class="swiper-wrapper">
+							{{#each data3}}
+							<div class="swiper-slide">
+								<div class="card-post-slide">
+									<div class="card-post-slide-img">
+										<img src="{{this.thumbnail}}" alt="m43" style="object-fit: cover;">
+									</div>
+									<div class="card-post-slide-category">
+										<a href="/">{{this.genre}}</a>
+									</div>
+									<div class="card-post-slide-title">
+										<a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a>
+									</div>
+									<div class="card-post-slide-text">
+										Rating : {{this.rating}}<br>Durasi : {{this.duration}}
+									</div>
+								</div>
+							</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="classic-slide-posts padding-left padding-right padding-bottom">
+				<div class="section-title-wrapper">
+					<div class="section-title">
+						<h3>Indonesia</h3>
+					</div>
+					<a href="/movie-4/">
+						<span>Semuanya</span><i class="material-icons">chevron_right</i>
+					</a>
+				</div>
+				<div class="section-content padding-top">
+					<div class="swiper-container d_swiper4 swiper-container-horizontal">
+						<div class="swiper-wrapper">
+							{{#each data4}}
+							<div class="swiper-slide">
+								<div class="classic-slide-post">
+									<div class="classic-slide-post-img">
+										<img src="{{this.thumbnail}}" alt="m1" style="object-fit: cover;">
+									</div>
+									<div class="classic-slide-post-title">
+										<a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a>
+									</div>
+									<div class="classic-slide-post-desc">
+										{{this.genre}}
+									</div>
+								</div>
+							</div>
+							{{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-posts-slide padding-left padding-right padding-bottom">
+				<div class="section-title-wrapper">
+					<div class="section-title">
+						<h3>Kategori</h3>
+					</div>
+					<a href="/movie-5/">
+						<span>Semuanya</span><i class="material-icons">chevron_right</i>
+					</a>
+				</div>
+				<div class="custom-toolbar no-padding-left">
+					<a href="#aksi" class="tab-link tab-link-active">Aksi</a>
+					<a href="#drama" class="tab-link">Drama</a>
+					<a href="#fantasi" class="tab-link">Fantasi</a>
+					<a href="#komedi" class="tab-link">Komedi</a>
+				</div>
+				<div class="section-content">
+					<div class="tabs-animated-wrap">
+						<div class="tabs">
+							<div id="aksi" class="page-content tab tab-active">
+								{{#each data5}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="drama" class="page-content tab">
+								{{#each data6}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="fantasi" class="page-content tab">
+								{{#each data7}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="komedi" class="page-content tab">
+								{{#each data8}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+	export default{
+		mounted() {
+			var $this = this;
+			var app = this.$app;
+			var $$ = this.$$;
+			var self = this;
+		},
+		methods: {
+			singleMovie: function(e) {
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				var self = this;
+				localStorage.setItem('duration', $$(e.path[0]).data("duration"));
+				localStorage.setItem('title', $$(e.path[0]).data("title"));
+				localStorage.setItem('genre', $$(e.path[0]).data("genre"));
+				localStorage.setItem('quality', $$(e.path[0]).data("quality"));
+				localStorage.setItem('rating', $$(e.path[0]).data("rating"));
+				localStorage.setItem('thumbnail', $$(e.path[0]).data("thumbnail"));
+				localStorage.setItem('trailer', $$(e.path[0]).data("trailer"));
+				localStorage.setItem('watch', $$(e.path[0]).data("watch"));
+				console.log(e);
+			},
+		},
+		on: {
+			pageInit: function () {
+				var self = this;
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				app.request.get('https://api-lk21.herokuapp.com/comingsoon', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data1: items
+					});
+				});
+				app.request.get('https://api-lk21.herokuapp.com/newupload', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 8; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data2: items
+					});
+				});
+				app.request.get('https://api-lk21.herokuapp.com/tv', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 5; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data3: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/country?country=indonesia', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data4: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=action', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 4; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data5: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=drama', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 4; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data6: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=fantasy', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 4; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data7: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=komedi', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 4; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data8: items
+					});
+				});
+			},
+		},
+	}
+</script>

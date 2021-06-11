@@ -1,0 +1,399 @@
+<template>
+	<div class="page no-navbar">
+		<div class="page-content">
+			<div class="page-title-wrapper">
+				<div class="page-title">
+					<a href="#" class="link back">
+						<i class="material-icons">arrow_back</i>
+					</a>
+					<h1 style="margin-top: 25px;">Kategori</h1>
+				</div>
+			</div>
+			<div class="padding-left padding-right padding-bottom">
+				<div class="section-content padding-top">
+					<div class="custom-toolbar" style="overflow: auto; white-space: nowrap; overflow-y: hidden;">
+						<a href="#aksii" class="my-toolbar tab-link tab-link-active">Aksi</a>
+						<a href="#dramaa" class="my-toolbar tab-link">Drama</a>
+						<a href="#fantasii" class="my-toolbar tab-link">Fantasi</a>
+						<a href="#film" class="my-toolbar tab-link">Film</a>
+						<a href="#horor" class="my-toolbar tab-link">Horor</a>
+						<a href="#keluarga" class="my-toolbar tab-link">Keluarga</a>
+						<a href="#komedii" class="my-toolbar tab-link">Komedi</a>
+						<a href="#misteri" class="my-toolbar tab-link">Misteri</a>
+						<a href="#perang" class="my-toolbar tab-link">Perang</a>
+						<a href="#romantis" class="my-toolbar tab-link">Romantis</a>
+					</div>	
+					<div class="tabs-animated-wrap">
+						<div class="tabs">
+							<div id="aksii" class="page-content tab tab-active padding">
+								{{#each data1}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="dramaa" class="page-content tab padding">
+								{{#each data2}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="fantasii" class="page-content tab padding">
+								{{#each data3}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="film" class="page-content tab padding">
+								{{#each data4}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="horor" class="page-content tab padding">
+								{{#each data5}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="keluarga" class="page-content tab padding">
+								{{#each data6}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="komedii" class="page-content tab padding">
+								{{#each data7}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="misteri" class="page-content tab padding">
+								{{#each data8}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="perang" class="page-content tab padding">
+								{{#each data9}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+							<div id="romantis" class="page-content tab padding">
+								{{#each data10}}
+								<div class="list-post margin-bottom">
+									<div class="list-post-img">
+										<img src="{{this.thumbnail}}" class="lazy lazy-fade-in" data-src="static/img/lazy.png" alt="38m" style="object-fit: cover;">
+									</div>
+									<div class="list-post-content">
+										<div class="list-post-category"><a href="/">Durasi : {{this.duration}}</a></div>
+										<div class="list-post-title"><a class="single-movie" href="/single-movie/" @click="singleMovie" data-duration="'{{this.duration}}'" data-title="'{{this.title}}'" data-genre="'{{this.genre}}'" data-quality="'{{this.quality}}'" data-rating="'{{this.rating}}'" data-thumbnail="'{{this.thumbnail}}'" data-trailer="'{{this.trailer}}'" data-watch="'{{this.watch}}'">{{this.title}}</a></div>
+										<div class="review">
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star</i>
+											<i class="material-icons">star_half</i>
+											{{this.rating}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+	export default{
+		mounted() {
+			var $this = this;
+			var app = this.$app;
+			var $$ = this.$$;
+			var self = this;
+		},
+		methods: {
+			singleMovie: function(e) {
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				var self = this;
+				localStorage.setItem('duration', $$(e.path[0]).data("duration"));
+				localStorage.setItem('title', $$(e.path[0]).data("title"));
+				localStorage.setItem('genre', $$(e.path[0]).data("genre"));
+				localStorage.setItem('quality', $$(e.path[0]).data("quality"));
+				localStorage.setItem('rating', $$(e.path[0]).data("rating"));
+				localStorage.setItem('thumbnail', $$(e.path[0]).data("thumbnail"));
+				localStorage.setItem('trailer', $$(e.path[0]).data("trailer"));
+				localStorage.setItem('watch', $$(e.path[0]).data("watch"));
+				console.log(e);
+			},
+		},
+		on: {
+			pageInit: function () {
+				var self = this;
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=action', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data1: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=drama', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data2: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=fantasy', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data3: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=movie', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data4: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=horror', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data5: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=family', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data6: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=komedi', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data7: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=misteri', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data8: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=war', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data9: items
+					});
+				});
+				app.request.get('http://api-lk21.herokuapp.com/genre?genre=romance', (response) => {
+					var dataJSON = new Array();
+					dataJSON = JSON.parse(response);
+					var items = [];
+					for(var i = 1; i <= 10; i++) {
+						items.push(dataJSON.result[i]);
+					}
+					console.log(items)
+					self.$setState({
+						data10: items
+					});
+				});
+			},
+		},
+	}
+</script>
